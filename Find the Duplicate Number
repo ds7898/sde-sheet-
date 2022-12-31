@@ -19,3 +19,31 @@ public:
 //sorting is used 
 time complexity : O(Nlogn + n) nlogn for sorting and n for traversing
 space complexity:O(1)
+
+
+OPTIMISED APPROACH SLOW AND FAST POINTER 
+TC:O(N)  , SC:O(1)
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) {
+        
+        int  slow = nums[0];
+        int fast =nums[0];
+        
+        do{
+            slow=nums[slow];
+            fast=nums[nums[fast]];
+        }while(slow!=fast);
+        
+        fast = nums[0];
+        
+        while(slow!=fast){
+            slow = nums[slow];
+            fast = nums[fast];
+        }
+        
+        
+        
+        return slow;
+    }
+};
