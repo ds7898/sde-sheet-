@@ -27,3 +27,6 @@ public:
         
         
 };
+optimised approach without using extra space or array 
+T.C: o(m+n)
+s.c : o(1)
