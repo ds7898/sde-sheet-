@@ -1,0 +1,25 @@
+class Solution {
+public:
+    int subarraySum(vector<int>&arr, int k) {
+        
+    int n =(int )arr.size();
+    int count  = 0 ; 
+    
+  unordered_map<int,int>prevsum;
+   int sum = 0 ;
+  for(int i = 0 ; i< n ; i++)
+  {
+      sum=sum+arr[i];
+      if(sum==k)
+          count++;
+
+      if(prevsum.find(sum-k)!=prevsum.end())
+          count=count+prevsum[sum-k];
+      
+      prevsum[sum]++;
+    }
+
+   return count;
+
+    }
+};
