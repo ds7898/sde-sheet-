@@ -13,3 +13,7 @@ public:
         return ans;
     }
 };
+
+
+T C: o(n^2)
+space complexity:o(n^2)
