@@ -14,3 +14,8 @@ public:
     return 0;
     }
 };
+
+
+//sorting is used 
+time complexity : O(Nlogn + n) nlogn for sorting and n for traversing
+space complexity:O(1)
